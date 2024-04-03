@@ -85,7 +85,10 @@ const login = async (req, res, next) => {
           role: user.User.role,
           email: user.email,
         },
-        process.env.JWT_SECRET
+        process.env.JWT_SECRET,
+        {
+          expiresIn: process.env.JWT_EXPIRED,
+        }
       );
 
       res.status(200).json({
