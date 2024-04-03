@@ -9,7 +9,7 @@ const multerFiltering = (req, file, cb) => {
   ) {
     cb(null, true);
   } else {
-    return cb(null, 'format salah');
+    return cb(null, "format salah");
   }
 };
 
